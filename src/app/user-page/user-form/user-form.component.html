@@ -1,0 +1,12 @@
+<div [formGroup]="usersForm">
+  <ng-container formArrayName="users">
+    <ng-container *ngFor="let userForm of users.controls; let i = index">
+      <div class="user-form-row" [formGroupName]="i">
+        <mat-form-field appearance="fill">
+          <input matInput formControlName="name">
+            <mat-label>Name</mat-label>
+        </mat-form-field>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>
