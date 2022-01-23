@@ -2,3 +2,5 @@
     #userFormComponent
     [usersData]="users"
 ></app-user-form>
+
+<p *ngIf="!usersFormValid"><small>The form is invalid</small></p>
